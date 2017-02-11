@@ -1,0 +1,268 @@
+EESchema Schematic File Version 2
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:special
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:Mimas-cache
+LIBS:kevin_library
+LIBS:numato_kicad_lib
+LIBS:Mimas-cache
+EELAYER 27 0
+EELAYER END
+$Descr A3 16535 11693
+encoding utf-8
+Sheet 1 4
+Title "MIMAS SPARTAN 6 FPGA MODULE"
+Date "22 nov 2014"
+Rev ""
+Comp "Numato Lab"
+Comment1 "http://www.numato.com"
+Comment2 "License : CC BY-SA"
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Sheet
+S 1900 3450 4000 1000
+U 5208ABA5
+F0 "PowerSupply" 50
+F1 "PowerSupply.sch" 50
+F2 "VCCAUX" I R 5900 3800 60 
+F3 "VCCINT" I R 5900 3900 60 
+F4 "VCCIO" I R 5900 4000 60 
+$EndSheet
+$Sheet
+S 12350 3450 900  3600
+U 5208ABCE
+F0 "Gpios" 50
+F1 "Gpios.sch" 50
+F2 "VCCIO" I L 12350 3700 60 
+F3 "SW[0...3]" I L 12350 3950 60 
+F4 "LED[0...7]" I L 12350 3850 60 
+F5 "GPIO-P[1..35]" B L 12350 5850 60 
+F6 "GPIO-N[1..35]" B L 12350 6000 60 
+$EndSheet
+Text Notes 2900 3950 0    157  ~ 31
+POWER SUPPLY
+Text Notes 12450 4950 0    157  ~ 31
+GPIOs
+Text Notes 8450 4650 0    197  ~ 39
+SPARTAN 6
+Text Notes 8150 5100 0    157  ~ 31
+XC6SLX9 - TQG144
+$Sheet
+S 7050 3350 4050 3600
+U 5208ABB2
+F0 "XC6SLX9" 50
+F1 "XC6SLX9.sch" 50
+F2 "PROGB" I L 7050 5350 60 
+F3 "VCCAUX" I L 7050 3800 60 
+F4 "VCCINT" I L 7050 3900 60 
+F5 "VCCIO" I L 7050 4000 60 
+F6 "LED[0...7]" I R 11100 3850 60 
+F7 "SW[0...3]" I R 11100 3950 60 
+F8 "GPIO-P[1..35]" B R 11100 5850 60 
+F9 "GPIO-N[1..35]" B R 11100 6000 60 
+F10 "CSO_B" B L 7050 4850 60 
+F11 "MOSI" B L 7050 6100 60 
+F12 "DIN" B L 7050 4750 60 
+F13 "CCLK" B L 7050 5950 60 
+$EndSheet
+$Comp
+L M25P16 U6
+U 1 1 545563D5
+P 4800 5850
+F 0 "U6" H 4800 5350 60  0000 C CNN
+F 1 "M25P16" H 4850 6350 60  0000 C CNN
+F 2 "~" H 4800 5850 60  0000 C CNN
+F 3 "~" H 4800 5850 60  0000 C CNN
+	1    4800 5850
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R8
+U 1 1 545565E6
+P 5950 4750
+F 0 "R8" V 6030 4750 40  0000 C CNN
+F 1 "0" V 5957 4751 40  0000 C CNN
+F 2 "~" V 5880 4750 30  0000 C CNN
+F 3 "~" H 5950 4750 30  0000 C CNN
+	1    5950 4750
+	0    -1   -1   0   
+$EndComp
+$Comp
+L R R1
+U 1 1 54556913
+P 4300 5050
+F 0 "R1" V 4380 5050 40  0000 C CNN
+F 1 "2.4k" V 4307 5051 40  0000 C CNN
+F 2 "~" V 4230 5050 30  0000 C CNN
+F 3 "~" H 4300 5050 30  0000 C CNN
+	1    4300 5050
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5900 3800 7050 3800
+Wire Wire Line
+	5900 3900 7050 3900
+Wire Wire Line
+	7050 4000 5900 4000
+Wire Bus Line
+	11100 3850 12350 3850
+Wire Bus Line
+	12350 3950 11100 3950
+Wire Bus Line
+	12350 5850 11100 5850
+Wire Bus Line
+	11100 6000 12350 6000
+Wire Wire Line
+	6300 5100 6300 3800
+Connection ~ 6300 3800
+Wire Wire Line
+	12350 3700 11150 3700
+Wire Wire Line
+	11150 3700 11150 3200
+Wire Wire Line
+	11150 3200 6800 3200
+Wire Wire Line
+	6800 3200 6800 4000
+Connection ~ 6800 4000
+Wire Wire Line
+	7050 4750 6200 4750
+Wire Wire Line
+	5700 4750 3800 4750
+Wire Wire Line
+	3800 4750 3800 5800
+Wire Wire Line
+	3800 5800 4100 5800
+Wire Wire Line
+	3850 5650 4100 5650
+Wire Wire Line
+	3850 5650 3850 4850
+Wire Wire Line
+	3850 4850 7050 4850
+Wire Wire Line
+	5500 5800 5650 5800
+Wire Wire Line
+	5650 5800 5650 5650
+Wire Wire Line
+	5650 5650 5500 5650
+Text Label 2300 5400 2    60   ~ 0
+VCCIO
+Wire Wire Line
+	7050 5950 5500 5950
+Wire Wire Line
+	5500 6100 7050 6100
+$Comp
+L R R17
+U 1 1 54557143
+P 6600 5350
+F 0 "R17" V 6680 5350 40  0000 C CNN
+F 1 "4.7k" V 6607 5351 40  0000 C CNN
+F 2 "~" V 6530 5350 30  0000 C CNN
+F 3 "~" H 6600 5350 30  0000 C CNN
+	1    6600 5350
+	0    1    1    0   
+$EndComp
+$Comp
+L R R9
+U 1 1 54557149
+P 6150 5650
+F 0 "R9" V 6230 5650 40  0000 C CNN
+F 1 "2.4k" V 6157 5651 40  0000 C CNN
+F 2 "~" V 6080 5650 30  0000 C CNN
+F 3 "~" H 6150 5650 30  0000 C CNN
+	1    6150 5650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6850 5350 7050 5350
+Wire Wire Line
+	6350 5350 6150 5350
+Wire Wire Line
+	6150 5350 6150 5400
+Wire Wire Line
+	6150 5900 6150 5950
+Connection ~ 6150 5950
+$Comp
+L R R16
+U 1 1 5455733A
+P 6150 6200
+F 0 "R16" V 6230 6200 40  0000 C CNN
+F 1 "2.4k" V 6157 6201 40  0000 C CNN
+F 2 "~" V 6080 6200 30  0000 C CNN
+F 3 "~" H 6150 6200 30  0000 C CNN
+	1    6150 6200
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR01
+U 1 1 54557342
+P 6150 6600
+F 0 "#PWR01" H 6150 6600 30  0001 C CNN
+F 1 "GND" H 6150 6530 30  0001 C CNN
+F 2 "" H 6150 6600 60  0000 C CNN
+F 3 "" H 6150 6600 60  0000 C CNN
+	1    6150 6600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6150 6450 6150 6600
+$Comp
+L GND #PWR02
+U 1 1 5455740B
+P 3800 6300
+F 0 "#PWR02" H 3800 6300 30  0001 C CNN
+F 1 "GND" H 3800 6230 30  0001 C CNN
+F 2 "" H 3800 6300 60  0000 C CNN
+F 3 "" H 3800 6300 60  0000 C CNN
+	1    3800 6300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4100 5950 3800 5950
+Wire Wire Line
+	3800 6100 4100 6100
+Connection ~ 3800 6100
+Wire Wire Line
+	3850 5050 4050 5050
+Connection ~ 3850 5050
+Wire Wire Line
+	4550 5050 6100 5050
+Text Label 4950 5050 0    60   ~ 0
+VCCIO
+Wire Wire Line
+	6100 5050 6100 4000
+Connection ~ 6100 4000
+Text Label 5650 5650 0    60   ~ 0
+VCCIO
+Text Label 3900 5950 0    60   ~ 0
+VCCIO
+Wire Wire Line
+	3800 6100 3800 6300
+$EndSCHEMATC

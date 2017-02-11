@@ -1,0 +1,339 @@
+EESchema Schematic File Version 2
+LIBS:owlboard-rescue
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:owlboard
+LIBS:owlboard-cache
+LIBS:usb_jtag-cache
+EELAYER 25 0
+EELAYER END
+$Descr A3 16535 11693
+encoding utf-8
+Sheet 1 5
+Title "MIMAS SPARTAN 6 FPGA MODULE"
+Date "8 feb 2015"
+Rev ""
+Comp "Numato Lab"
+Comment1 "http://www.numato.com"
+Comment2 "License : CC BY-SA"
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Sheet
+S 12350 3450 900  3600
+U 5208ABCE
+F0 "Gpios" 50
+F1 "Gpios.sch" 50
+F2 "VCCIO" I L 12350 3700 60 
+F3 "SW[0...3]" I L 12350 3950 60 
+F4 "LED[0...7]" I L 12350 3850 60 
+F5 "GPIO-P[1..35]" B L 12350 5850 60 
+F6 "GPIO-N[1..35]" B L 12350 6000 60 
+$EndSheet
+Text Notes 2900 3950 0    157  ~ 31
+POWER SUPPLY
+Text Notes 12450 4950 0    157  ~ 31
+GPIOs
+Text Notes 8450 4650 0    197  ~ 39
+SPARTAN 6
+Text Notes 8150 5100 0    157  ~ 31
+XC6SLX9 - TQG144
+$Comp
+L M25P16 U6
+U 1 1 545563D5
+P 4800 5850
+F 0 "U6" H 4800 5350 60  0000 C CNN
+F 1 "M25P80" H 4850 6350 60  0000 C CNN
+F 2 "SMD_Packages:SOIC-8-N" H 4800 5850 60  0000 C CNN
+F 3 "~" H 4800 5850 60  0000 C CNN
+	1    4800 5850
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R1
+U 1 1 54556913
+P 3700 5650
+F 0 "R1" V 3780 5650 40  0000 C CNN
+F 1 "2.4k" V 3707 5651 40  0000 C CNN
+F 2 "Resistors_SMD:R_0603_HandSoldering" V 3630 5650 30  0000 C CNN
+F 3 "~" H 3700 5650 30  0000 C CNN
+	1    3700 5650
+	0    1    1    0   
+$EndComp
+Text Label 2300 5400 2    60   ~ 0
+VCCIO
+$Comp
+L R R17
+U 1 1 54557143
+P 6600 5350
+F 0 "R17" V 6680 5350 40  0000 C CNN
+F 1 "4.7k" V 6607 5351 40  0000 C CNN
+F 2 "Resistors_SMD:R_0603_HandSoldering" V 6530 5350 30  0000 C CNN
+F 3 "~" H 6600 5350 30  0000 C CNN
+	1    6600 5350
+	0    1    1    0   
+$EndComp
+$Comp
+L R R9
+U 1 1 54557149
+P 6150 5650
+F 0 "R9" V 6230 5650 40  0000 C CNN
+F 1 "2.4k" V 6157 5651 40  0000 C CNN
+F 2 "Resistors_SMD:R_0603_HandSoldering" V 6080 5650 30  0000 C CNN
+F 3 "~" H 6150 5650 30  0000 C CNN
+	1    6150 5650
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R16
+U 1 1 5455733A
+P 6150 6200
+F 0 "R16" V 6230 6200 40  0000 C CNN
+F 1 "2.4k" V 6157 6201 40  0000 C CNN
+F 2 "Resistors_SMD:R_0603_HandSoldering" V 6080 6200 30  0000 C CNN
+F 3 "~" H 6150 6200 30  0000 C CNN
+	1    6150 6200
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR01
+U 1 1 54557342
+P 6150 6600
+F 0 "#PWR01" H 6150 6600 30  0001 C CNN
+F 1 "GND" H 6150 6530 30  0001 C CNN
+F 2 "" H 6150 6600 60  0000 C CNN
+F 3 "" H 6150 6600 60  0000 C CNN
+	1    6150 6600
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR02
+U 1 1 5455740B
+P 3800 6300
+F 0 "#PWR02" H 3800 6300 30  0001 C CNN
+F 1 "GND" H 3800 6230 30  0001 C CNN
+F 2 "" H 3800 6300 60  0000 C CNN
+F 3 "" H 3800 6300 60  0000 C CNN
+	1    3800 6300
+	1    0    0    -1  
+$EndComp
+Text Label 3950 4550 0    60   ~ 0
+VCCIO
+Text Label 5650 5650 0    60   ~ 0
+VCCIO
+Text Label 3900 5950 0    60   ~ 0
+VCCIO
+$Sheet
+S 1900 3450 4000 1000
+U 5208ABA5
+F0 "PowerSupply" 50
+F1 "PowerSupply.sch" 50
+F2 "VCCAUX" I R 5900 3800 60 
+F3 "VCCINT" I R 5900 3900 60 
+F4 "VCCIO" I R 5900 4000 60 
+F5 "D+" I L 1900 4000 60 
+F6 "D-" I L 1900 4100 60 
+F7 "5V" I L 1900 4200 60 
+F8 "GND" I L 1900 3900 60 
+$EndSheet
+Text Notes 2750 8200 0    157  ~ 31
+USB JTAG\n
+$Sheet
+S 7050 3350 4050 6100
+U 5208ABB2
+F0 "XC6SLX9" 50
+F1 "XC6SLX9.sch" 50
+F2 "PROGB" I L 7050 5350 60 
+F3 "VCCAUX" I L 7050 3800 60 
+F4 "VCCINT" I L 7050 3900 60 
+F5 "VCCIO" I L 7050 4000 60 
+F6 "LED[0...7]" I R 11100 3850 60 
+F7 "SW[0...3]" I R 11100 3950 60 
+F8 "GPIO-P[1..35]" B R 11100 5850 60 
+F9 "GPIO-N[1..35]" B R 11100 6000 60 
+F10 "CSO_B" B L 7050 4850 60 
+F11 "MOSI" B L 7050 6100 60 
+F12 "DIN" B L 7050 4750 60 
+F13 "CCLK" B L 7050 5950 60 
+F14 "TMS" B L 7050 7750 60 
+F15 "TDI" I L 7050 7950 60 
+F16 "TDO" O L 7050 8150 60 
+F17 "TCK" I L 7050 8350 60 
+F18 "TXD" O L 7050 8600 60 
+F19 "RXD" I L 7050 8800 60 
+$EndSheet
+$Sheet
+S 1950 7350 3300 1650
+U 54D65B30
+F0 "USBJTAG" 50
+F1 "usbJTAG.sch" 50
+F2 "5V" I L 1950 7500 60 
+F3 "D+" I L 1950 7800 60 
+F4 "D-" I L 1950 7650 60 
+F5 "GND" I L 1950 7950 60 
+F6 "TCK" O R 5250 8350 60 
+F7 "TDI" O R 5250 8150 60 
+F8 "TDO" O R 5250 7950 60 
+F9 "TMS" O R 5250 7750 60 
+F10 "TXD" O R 5250 8600 60 
+F11 "RXD" I R 5250 8800 60 
+$EndSheet
+$Comp
+L CONN_2 P1
+U 1 1 54D72478
+P 6150 9300
+F 0 "P1" V 6100 9300 40  0000 C CNN
+F 1 "CONN_2" V 6200 9300 40  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x02" H 6150 9300 60  0001 C CNN
+F 3 "" H 6150 9300 60  0000 C CNN
+	1    6150 9300
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5900 3800 7050 3800
+Wire Wire Line
+	5900 3900 7050 3900
+Wire Wire Line
+	7050 4000 5900 4000
+Wire Bus Line
+	11100 3850 12350 3850
+Wire Bus Line
+	12350 3950 11100 3950
+Wire Bus Line
+	12350 5850 11100 5850
+Wire Bus Line
+	11100 6000 12350 6000
+Wire Wire Line
+	12350 3700 11150 3700
+Wire Wire Line
+	11150 3700 11150 3200
+Wire Wire Line
+	11150 3200 6800 3200
+Wire Wire Line
+	6800 3200 6800 4000
+Connection ~ 6800 4000
+Wire Wire Line
+	3800 4750 7050 4750
+Wire Wire Line
+	3800 4750 3800 5800
+Wire Wire Line
+	3800 5800 4100 5800
+Wire Wire Line
+	5650 5800 5500 5800
+Wire Wire Line
+	5650 5250 5650 5800
+Wire Wire Line
+	5650 5650 5500 5650
+Wire Wire Line
+	7050 5950 5500 5950
+Wire Wire Line
+	5500 6100 7050 6100
+Wire Wire Line
+	6750 5350 7050 5350
+Wire Wire Line
+	6150 5800 6150 6050
+Connection ~ 6150 5950
+Wire Wire Line
+	6150 6350 6150 6600
+Wire Wire Line
+	3400 5950 4100 5950
+Wire Wire Line
+	3800 6100 4100 6100
+Connection ~ 3800 6100
+Wire Wire Line
+	3800 6100 3800 6300
+Wire Wire Line
+	1900 4200 1800 4200
+Wire Wire Line
+	1800 4200 1800 7500
+Wire Wire Line
+	1800 7500 1950 7500
+Wire Wire Line
+	1950 7650 1650 7650
+Wire Wire Line
+	1650 7650 1650 4100
+Wire Wire Line
+	1650 4100 1900 4100
+Wire Wire Line
+	1900 4000 1500 4000
+Wire Wire Line
+	1500 4000 1500 7800
+Wire Wire Line
+	1500 7800 1950 7800
+Wire Wire Line
+	1350 7950 1950 7950
+Wire Wire Line
+	1350 7950 1350 3900
+Wire Wire Line
+	1350 3900 1900 3900
+Wire Wire Line
+	5250 7750 7050 7750
+Wire Wire Line
+	5250 7950 7050 7950
+Wire Wire Line
+	5250 8150 7050 8150
+Wire Wire Line
+	5250 8350 7050 8350
+Wire Wire Line
+	5250 8600 7050 8600
+Wire Wire Line
+	5250 8800 7050 8800
+Wire Wire Line
+	6250 8950 6250 8600
+Connection ~ 6250 8600
+Wire Wire Line
+	6050 8800 6050 8950
+Connection ~ 6050 8800
+Connection ~ 5650 5650
+Wire Wire Line
+	6150 5350 6450 5350
+Wire Wire Line
+	3400 4550 6150 4550
+Wire Wire Line
+	3400 4550 3400 5950
+Wire Wire Line
+	3850 5650 4100 5650
+Wire Wire Line
+	3400 5650 3550 5650
+Connection ~ 3400 5650
+Wire Wire Line
+	4050 5650 4050 4850
+Wire Wire Line
+	4050 4850 7050 4850
+Connection ~ 4050 5650
+Connection ~ 6150 5350
+Connection ~ 6150 4000
+Connection ~ 6150 4550
+Wire Wire Line
+	6150 4000 6150 5500
+Wire Wire Line
+	6150 5250 5650 5250
+Connection ~ 6150 5250
+$EndSCHEMATC
